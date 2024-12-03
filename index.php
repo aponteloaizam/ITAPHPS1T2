@@ -8,119 +8,123 @@
     </head>
     <body class="body">
         <?php 
-        echo "<b>E1N1</b><br/>";
+        echo "<b>E1N1</b>\n<br/>";
         
         $varInteger = 1;
         $varDouble = 0.5;
         $varString = "Hola";
         $varBoolean = true;
 
-        echo "<br/>Las variables definidas son:<br/>Integer: " . $varInteger . "<br/>Double: " . $varDouble . "<br/>String: " . $varString . "<br/>Boolean: " . $varBoolean . "<br/>";
+        echo "\n<br/>Las variables definidas son:\n<br/>Integer: " . $varInteger . "\n<br/>Double: " . $varDouble . "\n<br/>String: " . $varString . "\n<br/>Boolean: " . $varBoolean . "\n<br/>";
         
         define("NOMBRE","Ale");
 
-        echo "<br/>La constante en formato título es:<br/>" . "<h1>" . NOMBRE . "</h1>  ";
+        echo "\n<br/>La constante en formato título es:\n<br/>" . "<h1>" . NOMBRE . "</h1>\n<br/>";
 
-        echo "<br/><b>E2N1</b><br/>";
+        echo "\n<br/><b>E2N1</b>\n<br/>";
 
         $varWorld = "Hello, World!";
 
-        echo "<br/>La frase original es " . $varWorld;
-        echo "<br/>La frase en mayúsculas es " . strtoupper($varWorld);
-        echo "<br/>La longitud de la frase es de " . strlen($varWorld) . " caracteres.";
-        echo "<br/>La frase invertida es " . strrev($varWorld);
+        echo "\n<br/>La frase original es " . $varWorld;
+        echo "\n<br/>La frase en mayúsculas es " . strtoupper($varWorld);
+        echo "\n<br/>La longitud de la frase es de " . strlen($varWorld) . " caracteres";
+        echo "\n<br/>La frase invertida es " . strrev($varWorld);
 
-        $varFrase = "Este es el curso de PHP.";
+        $varFrase = "Este es el curso de PHP";
 
-        echo "<br/>La frase final es " . $varWorld . " " . $varFrase . "<br/>";
+        echo "\n<br/>La frase final es " . $varWorld . " " . $varFrase . "\n<br/>";
 
-        echo "<br/><b>E3N1</b><br/>";
+        echo "\n<br/><b>E3N1</b>\n<br/>";
 
         $x = 10;
         $y = 4;
         $m = 2.5;
         $n = 1.5;
 
-        echo "<br/>El valor de la variable X es " . $x . " y el de la variable Y es " . $y;
-        echo "<br/>La suma de ambas es " . ($x + $y);
-        echo "<br/>La resta de ambas es " . ($x - $y);
-        echo "<br/>El producto de ambas es " . ($x * $y);
-        echo "<br/>El resto de la división de ambas es " . ($x % $y) . "<br/>";
+        echo "\n<br/>El valor de la variable X es " . $x . " y el de la variable Y es " . $y;
+        echo "\n<br/>La suma de ambas es " . ($x + $y);
+        echo "\n<br/>La resta de ambas es " . ($x - $y);
+        echo "\n<br/>El producto de ambas es " . ($x * $y);
+        echo "\n<br/>El resto de la división de ambas es " . ($x % $y) . "\n<br/>";
 
-        echo "<br/>El valor de la variable M es " . $m . " y el de la variable N es " . $n;
-        echo "<br/>La suma de ambas es " . ($m + $n);
-        echo "<br/>La resta de ambas es " . ($m - $n);
-        echo "<br/>El producto de ambas es " . ($m * $n);
-        echo "<br/>El resto de la división de ambas es " . ($m % $n) . "<br/>";
+        echo "\n<br/>El valor de la variable M es " . $m . " y el de la variable N es " . $n;
+        echo "\n<br/>La suma de ambas es " . ($m + $n);
+        echo "\n<br/>La resta de ambas es " . ($m - $n);
+        echo "\n<br/>El producto de ambas es " . ($m * $n);
+        echo "\n<br/>El resto de la división de ambas es " . ($m % $n) . "\n<br/>";
 
-        echo "<br/>El doble de las variables X, Y, M y N es respectivamente " . ($x * 2) . ", " . ($y * 2) . ", " . ($m * 2) . ", " . ($n * 2);
-        echo "<br/>La suma de todas las variables es " . ($x + $y + $m + $n);
-        echo "<br/>El producto de todas las variables es " . ($x * $y * $m * $n) . "<br/>";
+        echo "\n<br/>El doble de las variables X, Y, M y N es respectivamente " . ($x * 2) . ", " . ($y * 2) . ", " . ($m * 2) . ", " . ($n * 2);
+        echo "\n<br/>La suma de todas las variables es " . ($x + $y + $m + $n);
+        echo "\n<br/>El producto de todas las variables es " . ($x * $y * $m * $n) . "\n<br/>";
 
         $operador;
 
-        function calculadora(int $num1, int $num2, $operador): float {
+        function calcular(int $num1, int $num2, string $operador): string {
             switch ($operador) {
                 case "+":
-                    $resultado = $num1 + $num2;
+                    $resultado = "\n<br/>El resultado de la suma es " . ($num1 + $num2);
                 break;
                 case "-":
-                    $resultado = $num1 - $num2;
+                    $resultado = "\n<br/>El resultado de la resta es " . ($num1 - $num2);
                 break;
                 case "*":
-                    $resultado = $num1 * $num2;
+                    $resultado = "\n<br/>El resultado de la multiplicación es " . ($num1 * $num2);
                 break;
                 case "/":
-                    $resultado = $num1 / $num2;
-                break;                
+                    $resultado = "\n<br/>El resultado de la división es " . ($num1 / $num2);
+                break;
+                default:
+                    $resultado = "\n<br/>El operador introducido es erróneo";
             }
             return $resultado;
         }
 
-        echo "<br/>Calculadora";
-        echo "<br/>El resultado de la suma es " . calculadora(5, 2, "+");
-        echo "<br/>El resultado de la resta es " . calculadora(5, 2, "-");
-        echo "<br/>El resultado de la multiplicación es " . calculadora(5, 2, "*");
-        echo "<br/>El resultado de la división es " . calculadora(5, 2, "/") . "<br/>";
+        echo "\n<br/>Calculadora\n<br/>";
+        echo calcular(5, 2, "+");
+        echo calcular(5, 2, "-");
+        echo calcular(5, 2, "*");
+        echo calcular(5, 2, "/");
+        echo calcular(5, 2, "&") . "\n<br/>";
 
-        echo "<br/><b>E4N1</b><br/>";
+        echo "\n<br/><b>E4N1</b>\n<br/>";
 
-        function contar(int $num1, int $num2): string {
-            if ($num1 == 0) {
-                $num1 = 10;
-            }
+        function contar(int $num1, int $num2 = 10): string {
             $i = 0;
             $resultado = "";
-            while ($i <= $num1) {
+            while ($i <= $num2) {
                 $resultado .= $i . " ";
-                $i = $i + $num2;
+                $i = $i + $num1;
             }
-            return "<br/>A continuación la secuencia desde el 0 hasta el " . $num1 . ", contada de " . $num2 . " en " . $num2 . ":<br/>" . $resultado;
+            return "\n<br/>A continuación la secuencia desde el 0 hasta el " . $num2 . ", contada de " . $num1 . " en " . $num1 . ":\n<br/>" . $resultado;
         }
 
-        echo contar(20,2) . "<br/>";
+        echo contar(2, 20) . "\n<br/>";
 
-        echo "<br/><b>E5N1</b><br/>";
+        echo contar(2) . "\n<br/>";
 
-        function grado(float $nota, int $base): string {
+        echo "\n<br/><b>E5N1</b>\n<br/>";
+
+        function verificar(float $nota, int $base): string {
+            $respuesta = "";
             $nota = ($nota * 100) / $base;
             if ($nota >= 60) {
-                return "<br/>El estudiante corresponde a Primera División.";
+                $respuesta = "\n<br/>Primera División";
             }
-            else if ($nota >= 45 && $nota <= 59) {
-                return "<br/>El estudiante corresponde a Segunda División.";
+            else if ($nota >= 45) {
+                $respuesta = "\n<br/>Segunda División";
             }
-            else if ($nota >= 33 && $nota <= 44) {
-                return "<br/>El estudiante corresponde a Tercera División.";
+            else if ($nota >= 33) {
+                $respuesta = "\n<br/>Tercera División";
             }
             else {
-                return "<br/>El estudiante reprobará.";
+                $respuesta = "\n<br/>Reprobará";
             }
+            return $respuesta;
         }
 
-        echo grado(4.5,10) . "<br/>";
+        echo verificar(4.5,10) . "\n<br/>";
 
-        echo "<br/><b>E6N1</b><br/>";
+        echo "\n<br/><b>E6N1</b>\n<br/>";
 
         function isBitten(): bool {
             $num = rand(1,100);
@@ -135,7 +139,7 @@
 
         $resultado = (isBitten() < 50) ? "Charle me ha mordido!" : "Charle no me ha mordido!";
 
-        echo "<br/>" . $resultado . "<br/>";
+        echo "\n<br/>" . $resultado . "\n<br/>";
         ?>
     </body>
 </html>
