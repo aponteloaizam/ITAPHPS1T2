@@ -68,6 +68,22 @@ function calcular(int $var3a, int $var3b, string $operador): string {
 echo "Imprimiendo diferentes resultados de ejecutar la función calculadora.\n";
 echo calcular(2, 3, "*") . "\n";
 echo calcular(2, 3, "/") . "\n";
-echo calcular(2, 3, "&") . "\n";
+echo calcular(2, 3, "&");
+
+echo "\n\nEjercicio 4\n\n";
+
+function contar(int $var4b, int $var4a = 10): string {
+    $i = 0;
+    $resultado = "";
+    while($i<=$var4a) {
+        $resultado .= $i . " ";
+        $i = $i + $var4b;
+    }
+    return "La secuencia a continuación se cuenta de " . $var4b . " en " . $var4b . ".\n" . $resultado;
+
+}
+
+echo contar(4, 20) . "\n";
+echo contar(2);
 
 ?>
