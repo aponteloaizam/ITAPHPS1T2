@@ -86,4 +86,30 @@ function contar(int $var4b, int $var4a = 10): string {
 echo contar(4, 20) . "\n";
 echo contar(2);
 
+echo "\n\nEjercicio 5\n\n";
+
+function verificar(float $nota): string {
+    $var5 = $nota * 10; 
+    $resultado = "";
+
+    if($var5 >= 60) {
+        $resultado = "Primera División";
+    }
+    else if ($var5 >= 45 && $var5 <= 59) {
+        $resultado = "Segunda División";
+    }
+    else if ($var5 >= 33 && $var5 <= 44) {
+        $resultado = "Tercera División";
+    }
+    else {
+        $resultado = "Reprobado";
+    }
+    return "El estudiante con nota " . $nota . ", tiene como grado: " . $resultado;
+}
+
+echo verificar(7) . "\n";
+echo verificar(5) . "\n";
+echo verificar(4) . "\n";
+echo verificar(2);
+
 ?>
