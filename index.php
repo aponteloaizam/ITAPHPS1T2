@@ -26,6 +26,20 @@ echo "Original: " . $var2a . "\n";
 echo "Mayúsculas: " . strtoupper($var2a) . "\n";
 echo "Invertida: " . strrev($var2a) . "\n";
 echo "Concatenada: " . $var2a . " " . $var2b . "\n";
-echo "El tamaño del string original es de " . strlen($var2a) . " caracteres.\n";
+echo "El tamaño del string original es de " . strlen($var2a) . " caracteres.";
+
+echo "\n\nEjercicio 3a\n\n";
+
+$x = 2;
+$y = 3;
+$m = 1.5;
+$n = 2.5;
+
+echo "Imprimiendo las variables declaradas.\nX: " . $x . "\nY: " . $y . "\nM: " . $m . "\nN: " . $n . "\n\n";
+echo "Imprimiendo operaciones con X y Y.\nSuma: " . ($x + $y). "\nResta: " . ($x - $y) . "\nProducto: " . ($x * $y) . "\nMódulo: " . ($x % $y) . "\n\n";
+echo "Imprimiendo operaciones con M y N.\nSuma: " . ($m + $n). "\nResta: " . ($m - $n) . "\nProducto: " . ($m * $n) . "\nMódulo: " . ($m % $n) . "\n\n";
+echo "Imprimiendo el doble de cada variable.\nX: " . ($x * 2) . "\nY: " . ($y * 2) . "\nM: " . ($m * 2) . "\nN: " . ($n * 2). "\n\n";
+echo "Imprimiendo la suma de todas las variables.\n" . ($x + $y + $m + $n) . "\n\n";
+echo "Imprimiendo el producto de todas las variables.\n" . ($x * $y * $m * $n) . "\n\n";
 
 ?>
