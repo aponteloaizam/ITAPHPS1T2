@@ -112,4 +112,19 @@ echo verificar(5) . "\n";
 echo verificar(4) . "\n";
 echo verificar(2);
 
+echo "\n\nEjercicio 6\n\n";
+
+function isBitten() {
+    $var6 = rand(1,100);
+    if ($var6 <= 50) {
+        $resultado = true;
+    }
+    else {
+        $resultado = false;
+    }
+    return $resultado;
+}
+
+echo (isBitten() == true) ? "Charle me ha mordido!" : "Charle no me ha mordido!";
+
 ?>
