@@ -72,6 +72,8 @@ echo calcular(2, 3, "&");
 
 echo "\n\nEjercicio 4\n\n";
 
+echo "Imprimiendo secuencias númericas en función de parámetros dados.\n";
+
 function contar(int $var4b, int $var4a = 10): string {
     $i = 0;
     $resultado = "";
@@ -79,7 +81,7 @@ function contar(int $var4b, int $var4a = 10): string {
         $resultado .= $i . " ";
         $i = $i + $var4b;
     }
-    return "La secuencia a continuación se cuenta de " . $var4b . " en " . $var4b . ".\n" . $resultado;
+    return "La secuencia a continuación se cuenta hasta el número " . $var4a . ", de " . $var4b . " en " . $var4b . ": " . $resultado;
 
 }
 
@@ -87,6 +89,8 @@ echo contar(4, 20) . "\n";
 echo contar(2);
 
 echo "\n\nEjercicio 5\n\n";
+
+echo "Imprimiendo grados en función de notas.\n";
 
 function verificar(float $nota): string {
     $var5 = $nota * 10; 
@@ -114,6 +118,8 @@ echo verificar(2);
 
 echo "\n\nEjercicio 6\n\n";
 
+echo "Imprimiendo mensaje en función de una condición.\n";
+
 function isBitten() {
     $var6 = rand(1,100);
     if ($var6 <= 50) {
@@ -126,5 +132,22 @@ function isBitten() {
 }
 
 echo (isBitten() == true) ? "Charle me ha mordido!" : "Charle no me ha mordido!";
+
+echo "\n\nEjercicio 7\n\n";
+
+echo "Imprimiendo costos de llamadas en función de su duración.\n";
+
+function pagar(int $var7): string {
+    if ($var7 <= 3) {
+        $resultado = 10;
+    }
+    else {
+        $resultado = 10 + (($var7 - 3) * 5);
+    }
+    return "La llamada tuvo una duración de " . $var7 . " minutos, y un costo de " . $resultado . " céntimos\n";
+}
+
+echo pagar(2);
+echo pagar(6);
 
 ?>
